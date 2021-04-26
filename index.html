@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Interior desigining template</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="all.js"></script>
+    </head>
+    <body>
+        <form>
+            <div class="form-row">
+              <div class="form-group col-sm-6">
+                <label for="boxcost">Box Cost</label>
+                <input type="text" class="form-control" id="boxcost" placeholder="Enter sft cost for box">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="framecost">Frame Cost</label>
+                <input type="text" class="form-control" id="framecost" placeholder="Enter sft cost for frame">
+              </div>
+            </div>
+        </form>
+        <h4>Add New Item</h4>
+        <div class="form-inline">
+            <!--div class="form-row"-->
+              <div class="form-group mb-2">
+                <input type="text" class="form-control" id="newitem" placeholder="Enter New Item">
+              </div>
+              
+              <br>
+              <div class="form-group mb-2">
+                <label for="inputZip">Box MM</label>
+                <input type="text" class="form-control" id="newitem_boxlengthmm" placeholder="Enter Box length in mm">
+              </div>
+              <div class="form-group mb-2">
+                
+                <input type="text" class="form-control" id="newitem_boxheightmm" placeholder="Enter Box height in mm">
+              </div>
+              <br>
+              <div class="form-group mb-2">
+                <label for="inputZip">Frame MM</label>
+                <input type="text" class="form-control" id="newitem_framelengthmm" placeholder="Enter Frame length in mm">
+              </div>
+              <div class="form-group mb-2">
+                
+                <input type="text" class="form-control" id="newitem_frameheightmm" placeholder="Enter Frame height in mm">
+              </div> <br>
+            </div>
+              <button onclick="newitem();" class="btn btn-primary">Add</button>     
+        </div>
+        <button class="btn btn-primary" onclick="done();">Done adding all items</button>     
+        
+<br><br>
+<HR>
+
+
+        <table class="table table-hover" id="myTable">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Items</th>
+                <th scope="col">Box Area</th>
+                <th scope="col">Frame Area</th>
+                <th scope="col">Total Cost</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <br>
+
+    </body>
+</html>
