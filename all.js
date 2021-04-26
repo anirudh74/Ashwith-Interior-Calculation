@@ -14,9 +14,19 @@ function newitem() {
     var newitem_boxheightmm =document.getElementById("newitem_boxheightmm").value;
     var newitem_framelengthmm =document.getElementById("newitem_framelengthmm").value;
     var newitem_frameheightmm =document.getElementById("newitem_frameheightmm").value;
-
-    var boxarea=((newitem_boxlengthmm/304.8 * newitem_boxheightmm/304.8)).toFixed(2);
-    var framearea = ((newitem_framelengthmm/304.8 * newitem_frameheightmm/304.8)).toFixed(2);
+    var inlineRadio1 = document.getElementById("inlineRadio1").checked;
+    var boxarea;
+    var framearea;
+    if(inlineRadio1)
+    {
+        boxarea=((newitem_boxlengthmm/304.8 * newitem_boxheightmm/304.8)).toFixed(2);
+        framearea = ((newitem_framelengthmm/304.8 * newitem_frameheightmm/304.8)).toFixed(2);
+    }
+    else
+    {
+        boxarea=((newitem_boxlengthmm/304.8 * newitem_boxheightmm)).toFixed(2);
+        framearea = ((newitem_framelengthmm/304.8 * newitem_frameheightmm)).toFixed(2);
+    }
 
     var boxcost = boxarea*boxsft;
     var framecost = framearea*framesft;  
