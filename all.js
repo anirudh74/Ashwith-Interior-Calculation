@@ -24,8 +24,8 @@ function newitem() {
     }
     else
     {
-        boxarea=((newitem_boxlengthmm/304.8 * newitem_boxheightmm)).toFixed(2);
-        framearea = ((newitem_framelengthmm/304.8 * newitem_frameheightmm)).toFixed(2);
+        boxarea=((newitem_boxlengthmm * newitem_boxheightmm)).toFixed(2);
+        framearea = ((newitem_framelengthmm * newitem_frameheightmm)).toFixed(2);
     }
 
     var boxcost = boxarea*boxsft;
